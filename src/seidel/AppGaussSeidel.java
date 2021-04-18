@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AppGaussSeidel {
 
     private static String problema;
-    private static int[][] matriz;
+    private static double[][] matriz;
     private static int nEcuaciones, nIncognitas, maxCalculos;
     private static double[] incognitas;
     private static double error;
@@ -95,7 +95,7 @@ public class AppGaussSeidel {
         System.out.print("NUMERO DE INCOGNITAS EN EL SISTEMA: ");
         nIncognitas = leer.nextInt();
         incognitas = new double[nIncognitas];
-        matriz = new int[nEcuaciones][nIncognitas + 1];
+        matriz = new double[nEcuaciones][nIncognitas + 1];
 
         // datos adicionales al problema
         System.out.print("ERROR TOLERABLE: ");
@@ -115,10 +115,10 @@ public class AppGaussSeidel {
             System.out.println("\n*** ECUACION " + (i + 1) + " ***");
             for (int j = 0; j < nIncognitas; j++){
                 System.out.print("COEFICIENTE EN VARIABLE x" + (j + 1) + " = ");
-                matriz[i][j] = leer.nextInt();
+                matriz[i][j] = leer.nextDouble();
             }
             System.out.print("RESULTADO DE ECUACION " + (i + 1) + " = ");
-            matriz[i][nIncognitas] = leer.nextInt();
+            matriz[i][nIncognitas] = leer.nextDouble();
         }
     }
 
@@ -140,7 +140,7 @@ public class AppGaussSeidel {
         nIncognitas = 4;
         nEcuaciones = 4;
         incognitas = new double[nIncognitas];
-        matriz = new int[nEcuaciones][nIncognitas + 1];
+        matriz = new double[nEcuaciones][nIncognitas + 1];
         // llenar matriz de coeficientes
         // ecuacion 1
         matriz[0][0] = 20;
@@ -184,7 +184,7 @@ public class AppGaussSeidel {
         nIncognitas = 4;
         nEcuaciones = 4;
         incognitas = new double[nIncognitas];
-        matriz = new int[nEcuaciones][nIncognitas + 1];
+        matriz = new double[nEcuaciones][nIncognitas + 1];
         // llenar matriz de coeficientes
         // ecuacion 1
         matriz[0][0] = 42;
